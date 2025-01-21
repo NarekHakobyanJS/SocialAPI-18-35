@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 20px;
+    position: sticky;
+    top : 0;
+    left : 0;
+}
+
+.logo-block > img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.navlink {
+    display: flex;
+    gap : 15px;
+}
+
+
+.navlink > li > a {
+    color : white;
+    text-decoration: none;
+}
