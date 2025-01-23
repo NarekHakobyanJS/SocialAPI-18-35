@@ -1,3 +1,13 @@
 .users-page {
-    margin-top: 20px;
+    width: 1300px;
+    margin: 0 auto;
+    margin-top: 20px ;
+}
+
+.users-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
