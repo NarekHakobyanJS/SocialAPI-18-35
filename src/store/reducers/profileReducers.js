@@ -28,6 +28,9 @@ const profileReducer = (state = initState, action) => {
 const getProfileAC = (profile) => ({ type: GET_PROFILE, payload: profile })
 const isFetchingAC = (fetching) => ({type : IS_FETCHING, payload : fetching})
 
+
+
+
 export const getProfileThunk = (id) => {
     return (dispatch) => {
         dispatch(isFetchingAC(true))
@@ -35,6 +38,16 @@ export const getProfileThunk = (id) => {
             .then((res) => {
                 dispatch(getProfileAC(res.data))
                 dispatch(isFetchingAC(false))
+            })
+    }
+}
+
+
+export const changeAvatarThunk = (file, id) => {
+    return (dispatch) => {
+        SocialAPI.changeAvatar(file)
+            .then(() => {
+                dispatch(getProfileThunk(id))
             })
     }
 }

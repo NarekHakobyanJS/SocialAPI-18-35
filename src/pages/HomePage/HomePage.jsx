@@ -1,9 +1,12 @@
 import React from 'react'
 import './HomePage.css'
+import LoginPage from '../LoginPage/LoginPage'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+      <LoginPage />
+    </div>
   )
 }
 
